@@ -37,11 +37,11 @@ public class CssSelectorsXpath {
         wd.findElement(By.cssSelector("a[title=\"sample-2\"]  + div button"));
         wd.findElement(By.xpath("//a[@title='sample-2']/following-sibling::div//button"));
 
-        wd.findElement(By.cssSelector("a[title*=\"Faded Short\"]"));
-        wd.findElement(By.xpath("//a[starts-with(@title,'Faded Short')]"));
+        wd.findElement(By.cssSelector(".active a[title*=\"Faded Short\"]"));
+        wd.findElement(By.xpath("//ul[contains(@class,'active')]//a[starts-with(@title,'Faded Short')]"));
 
-        wd.findElement(By.cssSelector("[data-id-product=\"1\"]"));
-        wd.findElement(By.xpath("//*[@data-id-product=\"1\"]"));
+        wd.findElement(By.cssSelector(".active [data-id-product=\"1\"]"));
+        wd.findElement(By.xpath("//ul[contains(@class,'active')]//*[@data-id-product=\"1\"]"));
 
         wd.findElement(By.cssSelector(".facebook-fanbox"));
         wd.findElement(By.xpath("//*[@class='facebook-fanbox']"));
